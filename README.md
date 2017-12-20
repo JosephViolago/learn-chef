@@ -1,6 +1,6 @@
 # Learn Chef Rally
 
-[Assignment](https://gist.github.com/jnonon/7746678b8cf76569da0204bd763f19af)
+https://learn.chef.io
 
 ## Startup
 
@@ -16,4 +16,4 @@
         - [x] Set up a Docker container to manage
         - [x] Configure a resource 
         - [x] Configure a package and service
-        - [ ] Make your recipe more managable
+        - [x] Make your recipe more managable

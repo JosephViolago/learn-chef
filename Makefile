@@ -16,7 +16,8 @@ local:
 local.docker:
 	docker-compose build
 	docker-compose up -d $(SERVICE)
-	docker-compose exec web /bin/bash -c "seq 2 | xargs -Iz chef-client --local-mode webserver.rb"
+	# docker-compose exec web /bin/bash -c "seq 2 | xargs -Iz chef-client --local-mode webserver.rb"
+	docker-compose exec web /bin/bash -c "seq 2 | xargs -Iz chef-client --local-mode --runlist 'recipe[learn_chef_httpd]'"
 
 ## ssh into docker container
 local.ssh:
