@@ -1,0 +1,18 @@
+version: "2.1"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8100:80"
+    volumes:
+      - ".:/root/chef-repo"
+    # systemd
+    stdin_open: true
+    tty: true
+    # https://github.com/CentOS/sig-cloud-instance-images/issues/54#issuecomment-348120159
+    cap_add:
+      - SYS_ADMIN
+    tmpfs: /run
+    stop_signal: RTMIN+3
