@@ -16,6 +16,7 @@ local:
 local.docker:
 	docker-compose build
 	docker-compose up -d $(SERVICE)
+	docker-compose exec web /bin/bash -c "seq 2 | xargs -Iz chef-client --local-mode webserver.rb"
 
 ## ssh into docker container
 local.ssh:

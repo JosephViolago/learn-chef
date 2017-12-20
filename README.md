@@ -15,5 +15,5 @@
     - [x] Learn the basics
         - [x] Set up a Docker container to manage
         - [x] Configure a resource 
-        - [ ] Configure a package and service
+        - [x] Configure a package and service
         - [ ] Make your recipe more managable
